@@ -11,7 +11,7 @@ The Bongo API can be retrieved in a number of different formats. These are XML, 
 http://api.ebongo.org/routelist?format=json&api_key=XXXX
 
 ######Returns
-'''Ruby
+```Ruby
 {	"routes" => [
 			        	{ "route" => {
 														"name"=>"", 
@@ -20,7 +20,7 @@ http://api.ebongo.org/routelist?format=json&api_key=XXXX
                  }
               ]
 }
-'''
+```
 ####Route Listing
 This will display a list of all routes in the Bongo system.
 URI - http://api.ebongo.org/routelist?format=json&api_key=XXXX
