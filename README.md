@@ -12,14 +12,7 @@ http://api.ebongo.org/routelist?format=json&api_key=XXXX
 
 ######Returns
 ```Ruby
-{	"routes" => [
-			        	{ "route" => {
-														"name"=>"", 
-														"tag"=>"", 
-														"agency"=>""}
-                 }
-              ]
-}
+{	"routes" => [{ "route" => { "name" => "", "tag" => "", "agency" => ""}}]}
 ```
 ####Route Listing
 This will display a list of all routes in the Bongo system.
