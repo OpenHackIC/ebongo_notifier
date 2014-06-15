@@ -10,33 +10,59 @@ The Bongo API can be retrieved in a number of different formats. These are XML, 
 
 http://api.ebongo.org/routelist?format=json&api_key=XXXX
 
+####Route Listing
+This will display a list of all routes in the Bongo system.
+URI - http://api.ebongo.org/routelist?format=json&api_key=XXXX
+
 ######Returns
 ```Ruby
 {"routes" => [{"route" => {"name" => "", "tag" => "", "agency" => ""}}]}
 ```
-####Route Listing
-This will display a list of all routes in the Bongo system.
-URI - http://api.ebongo.org/routelist?format=json&api_key=XXXX
 
 ####Route Info
 This will display information for a specific route. This takes two parameters,**_agency_** for the transit agency for the route and **_route_** for the route tag.
 URI - http://api.ebongo.org/route?agency=XXXX&route=XXXX&format=json&api_key=XXXX
 
+######Returns
+```Ruby
+{"route":{"name":null,"tag":null,"color":null,"max_lat":null,"max_lng":null,"min_lat":null,"min_lng":null,"agencyname":null,"agencytag":null,"paths":[],"directions":[],"messages":[]}}
+```
+
 ####Stop Listing
 This will display all stops in Bongo. Note, this may take some time to load due to the amount of information retrieved.
 URI - http://api.ebongo.org/stoplist?format=json&api_key=XXXX
+
+######Returns
+```Ruby
+{"stops":[{"stop":{"stopnumber":"1","stoptitle":"Downtown Interchange","stoplat":"41.66017","stoplng":"-91.5359"}}]}
+```
 
 ####Stop Info
 This will display information for a specific stop. This takes one parameter, **_stopid_** for stop number
 URI - http://api.ebongo.org/stop?stopid=XXXX&format=json&api_key=XXXX
 
+######Returns
+```Ruby
+{"stopinfo":{"stopid":"","stoptitle":"","latitude":"XX.XXXXX","longitude":"XX.XXXXXXX","routes":[{"title":"","tag":"","agency":""}]}}
+```
+
 ####Predictions
 This will display arrival predictions for a specific stop. This takes one parameter, **_stopid_** for stop number
 URI - http://api.ebongo.org/prediction?stopid=XXXX&format=json&api_key=XXXX
 
+######Returns
+```Ruby
+{"stopinfo":{"stopid":""},"predictions":[{"title":"","tag":"","minutes":0,"agency":"","agencyName":"","direction":"","stopname":""}]}
+```
+
 ####Bus Locations
 This will display location information for buses on a specific route. This takes two parameters, **_agency_** for the transit agency for the route and **_route_** for the route tag.
 URI - http://api.ebongo.org/buslocation?agency=XXXX&route=XXXX&format=json&api_key=XXXX
+
+######Returns
+```Ruby
+{"buses":[{"id":"XX"lat":"XX.XXXXX","lng":"XX.XXXXX","heading":""}]}
+```
 
 ###DATA
 
